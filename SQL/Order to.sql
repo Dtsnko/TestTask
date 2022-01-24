@@ -1,0 +1,2 @@
+ALTER TABLE OrderProduct 
+ADD FOREIGN KEY (OrderId) REFERENCES [Order](Id);
