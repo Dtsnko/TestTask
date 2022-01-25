@@ -11,6 +11,9 @@ var builder = WebApplication.CreateBuilder(args);
 string connection = "Server=.;Database=TestDB;Trusted_Connection=True;";
 builder.Services.AddDbContext<Context>(options => options.UseSqlServer(connection));
 builder.Services.AddControllers();
+builder.Services.AddScoped<IOrderProductService, OrderProductService>();
+builder.Services.AddScoped<IOrderService, OrderService>();
+builder.Services.AddScoped<IProductService, ProductService>();
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();

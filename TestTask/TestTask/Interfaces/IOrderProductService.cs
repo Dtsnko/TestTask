@@ -4,7 +4,7 @@ namespace TestTask.Interfaces
 {
     public interface IOrderProductService
     {
-        void GetAllOrderProducts();
+        List<OrderProduct> GetAllOrderProducts();
         void PostOrderProduct(OrderProduct orderProduct);
         void DeleteOrderProduct(OrderProduct entity);
     }

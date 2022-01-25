@@ -16,14 +16,15 @@ namespace TestTask.Services
             db.SaveChanges();
         }
 
-        public void GetAllOrderProducts()
+        public List<OrderProduct> GetAllOrderProducts()
         {
-            throw new NotImplementedException();
+            return db.OrderProducts.ToList();
         }
 
         public void PostOrderProduct(OrderProduct orderProduct)
         {
-            throw new NotImplementedException();
+            db.OrderProducts.Add(orderProduct);
+            db.SaveChangesAsync();
         }
     }
 }
